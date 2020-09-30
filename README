@@ -4,3 +4,56 @@ support research and education concerning Low Density Parity Check
 
 See index.html in this directory for an index to the documentation.
 Copyright information can be found there, and in the file COPYRIGHT.
+
+
+An Alternate Way To Calculate Conditional Probability
+Now, there is another way to calculate the conditional probability.
+
+Specifically, one conditional probability can be calculated using the other conditional probability; for example:
+
+P(A|B) = P(B|A) * P(A) / P(B)
+The reverse is also true; for example:
+
+P(B|A) = P(A|B) * P(B) / P(A)
+This alternate approach of calculating the conditional probability is useful either when the joint probability is challenging to calculate (which is most of the time), or when the reverse conditional probability is available or easy to calculate.
+
+This alternate calculation of the conditional probability is referred to as Bayes Rule or Bayes Theorem, named for Reverend Thomas Bayes, who is credited with first describing it. It is grammatically correct to refer to it as Bayes’ Theorem (with the apostrophe), but it is common to omit the apostrophe for simplicity.
+
+Bayes Theorem: Principled way of calculating a conditional probability without the joint probability.
+It is often the case that we do not have access to the denominator directly, e.g. P(B).
+
+We can calculate it an alternative way; for example:
+
+P(B) = P(B|A) * P(A) + P(B|not A) * P(not A)
+This gives a formulation of Bayes Theorem that we can use that uses the alternate calculation of P(B), described below:
+
+P(A|B) = P(B|A) * P(A) / P(B|A) * P(A) + P(B|not A) * P(not A)
+Or with brackets around the denominator for clarity:
+
+P(A|B) = P(B|A) * P(A) / (P(B|A) * P(A) + P(B|not A) * P(not A))
+Note: the denominator is simply the expansion we gave above.
+
+As such, if we have P(A), then we can calculate P(not A) as its complement; for example:
+
+P(not A) = 1 – P(A)
+Additionally, if we have P(not B|not A), then we can calculate P(B|not A) as its complement; for example:
+
+P(B|not A) = 1 – P(not B|not A)
+Now that we are familiar with the calculation of Bayes Theorem, let’s take a closer look at the meaning of the terms in the equation.
+
+The terms in the Bayes Theorem equation are given names depending on the context where the equation is used.
+
+It can be helpful to think about the calculation from these different perspectives and help to map your problem onto the equation.
+
+Firstly, in general, the result P(A|B) is referred to as the posterior probability and P(A) is referred to as the prior probability.
+
+P(A|B): Posterior probability.
+P(A): Prior probability.
+Sometimes P(B|A) is referred to as the likelihood and P(B) is referred to as the evidence.
+
+P(B|A): Likelihood.
+P(B): Evidence.
+This allows Bayes Theorem to be restated as:
+
+Posterior = Likelihood * Prior / Evidence
+We can make this clear with a smoke and fire case.
