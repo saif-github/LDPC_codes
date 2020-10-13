@@ -47,6 +47,10 @@
 *.gen
 *.pchk
 *.bin
+*.dec
+*.src
+*.enc
+*.rec
 
 # Kernel Module Compile Results
 *.mod*
@@ -56,6 +60,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
 alist-to-pchk
 decode
 encode
